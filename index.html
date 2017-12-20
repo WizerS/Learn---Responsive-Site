@@ -3,6 +3,7 @@
 <head>
     <title>Mobile responsive site</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="bttn.min.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 
@@ -10,9 +11,9 @@
     <nav>
         <ul class="topnav" id="dropdownClick">
             <li><a href="#">Home</a></li>
-            <li><a href="#">News</a></li>
-            <li><a href="#">Contact</a></li>
             <li><a href="#">About</a></li>
+            <li><a href="#">Read Posts</a></li>
+            <!--<li><a href="#">About</a></li>-->
             <li class="topnav-right"><a href="#">Sign Up</a></li>
             <li class="topnav-right"><a href="#">Sign In</a></li>
             <li class="dropdownIcon"><a href="javascript:void(0);" onclick="dropdownMenu()">&#9776;</a></li>
@@ -22,15 +23,18 @@
         <div class="row">
             <div class="col-6">
                 <div class="leftside-Col">
-                    <h1 class="large">Sign up with Lendor</h1>
-                    <h1 class="large">Singapore biggest rental marketplace</h1>
+                    <h1 class="large">Sign in</h1>
                 </div>
                 <form>
                     <div class="leftside-Col">
-                        <h2>Name </h2>
-                        <input class="input_name" type="text" placeholder="Name">
-                        <h2>Email </h2>
-                        <input class="input_email" type="email" placeholder="Eg. John@gmail.com">
+                        <form action="login.php" method="post">
+                            <h2>Name </h2>
+                            <input class="input_email" type="text" placeholder="Name" name="sEmail">
+                            <h2>Email </h2>
+                            <input class="input_password" type="email" placeholder="Eg. John@gmail.com" name="sPassword">
+                            <br/><br/>
+                            <input class="bttn-material-flat bttn-md bttn-primary input_button " type="submit" value="LOGIN" />
+                        </form>
                     </div>
                 </form>
             </div>
@@ -48,15 +52,23 @@
         <div class="row">
             <div class="col-7">
                 <article>
-                    <p>Lorem ipsum Lorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsumLorem ipsum
+                    <h1>About The App</h1>
+                    <p>The Lendor App is a peer to peer sharing mobile app for Library of Things, where we encourage the circular economy and sustainable living. With the vision of a world that fully embraces the sharing economy, this platform is created for item owners who are willing to open up their Library of Things to those who need it at a small fraction of its cost while giving consumers a conscious choice before making any purchase.
                     </p>
                 </article>
             </div>
             <div class="col-5">
-                <img src="Chat_Icon.png">
+                <div class="sliderIcon">
+                    <img src="Silder1device.png">
+                </div>
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="row">
+        </div>
+    </div>
+    <!--
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -71,6 +83,7 @@
             </div>
         </div>
     </div>
+    -->
     <footer class="home_footer">
         <div class="row">
             <div class="col-3">
@@ -107,5 +120,16 @@
             </div>
         </div>
     </footer>
+    <script>
+        function dropdownMenu() {
+            var x = document.getElementById("dropdownClick");
+            if (x.className === "topnav") {
+                x.className += " responsive"
+            }
+            else {
+                x.className = "topnav"
+            }
+        }
+    </script>
 </body>
 </html>

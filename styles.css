@@ -63,6 +63,11 @@ p {
 article p {
     padding: 10px;
     font-size: 1.2em;
+    color: darkgrey;
+}
+
+article h1 {
+    padding: 10px;
 }
 
 ul.topnav li{
@@ -81,10 +86,11 @@ ul.topnav li a {
     text-align: center;
     padding: 10px;
     text-transform: uppercase;
+    color: #a6c1ee;
 }
 
 ul.topnav li a:hover {
-    background-color: #0080ff;
+    background-color: #a6c1ee;
     color: white;
 }
 
@@ -96,10 +102,10 @@ ul.topnav li.dropdownIcon{
 /* Custom Styles */
 #section-1-gradient {
     background: #888888; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(#888888, #FFFFBF); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#888888, #FFFFBF); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#888888, #FFFFBF); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#888888, #FFFFBF); /* Standard syntax */
+    background: -webkit-linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%); /* Standard syntax */
 }
 
 h1.large {
@@ -113,6 +119,12 @@ h1.large {
     margin-left: 10%;
 }
 
+.input_button {
+    float: left;
+    display: block;
+    margin-top: 2em;
+}
+
 .rightside-Col {
     margin-left: 10%;
     margin-right: 10%;
@@ -123,6 +135,7 @@ h1.large {
 	padding-bottom: 56.25%; /* 16:9 */
 	padding-top: 25px;
 	height: 0;
+    overflow: hidden;
 }
 
 .video_container iframe {
@@ -152,6 +165,11 @@ input[type="email"] {
     max-width: 400px;
     min-width: 200px;
     border-radius: 8px;
+}
+
+div.sliderIcon img{
+    display: block;
+    margin : auto;
 }
 
 footer.home_footer {
@@ -209,15 +227,26 @@ footer.home_footer ul li {
         text-align: left;
     }
     
+    .col-5 {
+        width: 100%;
+        margin: auto;
+    }
+    
     .col-6 {
         width: 100%;
         margin: 0;
+    }
+    
+    .col-7 {
+        width: 100%;
+        margin: auto;
     }
     
     .col-3 {
         width:50%;
         display: block;
     }
+    
     
     div.leftside-Col, div.rightside-Col {
         margin: 15px;
